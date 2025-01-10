@@ -1,6 +1,6 @@
 # Notifications page
 
-![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Notifications page coding challenge](/design/desktop-preview.jpg)
 
 Users should be able to:  
 • Distinguish between "unread" and "read" notifications  
