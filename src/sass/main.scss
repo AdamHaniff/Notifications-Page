@@ -1,0 +1,44 @@
+// ********* DESIGN SYSTEM *********
+
+// ************ COLORS ************
+$color-white: #fff;
+$color-dark: #1c202b;
+$color-catalina-blue: #0a327b;
+$color-shuttle-grey: #5e6778;
+$color-alabaster: #f7fafd;
+$color-mercury: #dde7ee;
+$color-cadet-grey: #939cad;
+
+// ********** FONT-FAMILY **********
+$font-plus-jakarta-sans: "Plus Jakarta Sans", serif;
+
+// ********* FONT-WEIGHTS *********
+$fw-extra-bold: 800;
+$fw-bold: 700;
+$fw-medium-bold: 500;
+
+// ************* BASE *************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-white;
+  font-family: $font-plus-jakarta-sans;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+// ********** 375px LAYOUT **********
