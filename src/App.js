@@ -3,7 +3,7 @@ import Notifications from "./Notifications";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <Notifications />
     </div>

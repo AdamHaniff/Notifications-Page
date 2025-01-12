@@ -42,3 +42,123 @@ body {
 }
 
 // ********** 375px LAYOUT **********
+body {
+  padding: 2.4rem 1.6rem;
+}
+
+// ************** APP *************
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+// ************* HEADER *************
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__notifications-text-number {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+
+  &__notifications-text {
+    color: $color-dark;
+    font-size: 2rem;
+    font-weight: $fw-extra-bold;
+  }
+
+  &__notifications-number {
+    width: 3.2rem;
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    background: $color-catalina-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: $fw-extra-bold;
+  }
+
+  &__mark {
+    color: $color-shuttle-grey;
+    font-size: 1.4rem;
+    font-weight: $fw-medium-bold;
+  }
+}
+
+// ********* NOTIFICATIONS *********
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+// ********** NOTIFICATION **********
+.notification {
+  display: flex;
+  gap: 1.3rem;
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  background: $color-alabaster;
+
+  &__avatar {
+    display: block;
+    width: 3.9rem;
+    height: 3.9rem;
+  }
+
+  &__text-time {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &__name {
+    display: inline-block;
+    color: $color-dark;
+    font-size: 1.4rem;
+    font-weight: $fw-extra-bold;
+  }
+
+  &__action {
+    color: $color-shuttle-grey;
+    font-size: 1.4rem;
+    font-weight: $fw-medium-bold;
+    margin-left: 0.6rem;
+  }
+
+  &__post {
+    color: $color-shuttle-grey;
+    font-size: 1.4rem;
+    font-weight: $fw-bold;
+    margin-left: 0.6rem;
+  }
+
+  &__group {
+    display: inline-block;
+    color: $color-catalina-blue;
+    font-size: 1.4rem;
+    font-weight: $fw-bold;
+    margin-left: 0.6rem;
+  }
+
+  &__unread {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.81rem;
+    margin-left: 0.6rem;
+    transform: translateY(-0.05rem);
+  }
+
+  &__time {
+    color: $color-cadet-grey;
+    font-size: 1.4rem;
+    font-weight: $fw-medium-bold;
+  }
+}

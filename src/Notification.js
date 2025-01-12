@@ -19,6 +19,7 @@ function Notification({ notificationObj }) {
               height="8"
               viewBox="0 0 8 8"
               fill="none"
+              className="notification__unread"
             >
               <circle cx="4" cy="4" r="4" fill="#F65552" />
             </svg>

@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header className="header">
-      <div className="header__notifications-number">
+      <div className="header__notifications-text-number">
         <span className="header__notifications-text">Notifications</span>
         <span className="header__notifications-number">3</span>
       </div>
