@@ -76,7 +76,6 @@ body {
   width: 100%;
   padding: 1.6rem;
   border-radius: 0.8rem;
-  background: #f7fafd;
 }
 .notification__avatar {
   display: block;
@@ -124,4 +123,24 @@ body {
   color: #939cad;
   font-size: 1.4rem;
   font-weight: 500;
+}
+.notification__message {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #dde7ee;
+  background: #fff;
+  padding: 1.6rem;
+  margin-top: 1.2rem;
+  color: #5e6778;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.notification__picture {
+  display: block;
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 0.7rem;
+}
+
+.bg-alabaster {
+  background: #f7fafd;
 }/*# sourceMappingURL=main.css.map */

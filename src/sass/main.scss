@@ -105,7 +105,6 @@ body {
   width: 100%;
   padding: 1.6rem;
   border-radius: 0.8rem;
-  background: $color-alabaster;
 
   &__avatar {
     display: block;
@@ -161,4 +160,27 @@ body {
     font-size: 1.4rem;
     font-weight: $fw-medium-bold;
   }
+
+  &__message {
+    border-radius: 0.5rem;
+    border: 0.1rem solid $color-mercury;
+    background: $color-white;
+    padding: 1.6rem;
+    margin-top: 1.2rem;
+    color: $color-shuttle-grey;
+    font-size: 1.4rem;
+    font-weight: $fw-medium-bold;
+  }
+
+  &__picture {
+    display: block;
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 0.7rem;
+  }
+}
+
+// ********* DYNAMIC STYLES *********
+.bg-alabaster {
+  background: $color-alabaster;
 }

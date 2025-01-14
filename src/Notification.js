@@ -4,7 +4,7 @@ function Notification({ notificationObj }) {
     notificationObj;
 
   return (
-    <div className="notification">
+    <div className={`notification ${unread ? "bg-alabaster" : ""}`}>
       <img className="notification__avatar" src={avatar} alt="Avatar" />
       <div className="notification__text-time">
         <div className="notification__text">

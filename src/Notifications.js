@@ -1,10 +1,9 @@
-import data from "./data/data";
 import Notification from "./Notification";
 
-function Notifications() {
+function Notifications({ notificationsData }) {
   return (
     <div className="notifications">
-      {data.map((notification) => (
+      {notificationsData.map((notification) => (
         <Notification key={notification.name} notificationObj={notification} />
       ))}
     </div>
