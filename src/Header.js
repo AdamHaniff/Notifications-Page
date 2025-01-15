@@ -1,16 +1,8 @@
-import { useState } from "react";
-
-function Header({ notificationsData }) {
+function Header({ notificationsData, onMarkReadClick }) {
   // VARIABLES
-  const unreadNumber = notificationsData.filter(
+  const unreadNotifications = notificationsData.filter(
     (notification) => notification.unread
   ).length;
-
-  // STATE
-  const [unreadNotifications, setUnreadNotifications] = useState(unreadNumber);
-
-  // HANDLER FUNCTIONS
-  const handleMarkReadClick = () => setUnreadNotifications(0);
 
   return (
     <header className="header">
@@ -20,7 +12,7 @@ function Header({ notificationsData }) {
           {unreadNotifications}
         </span>
       </div>
-      <span className="header__mark" onClick={handleMarkReadClick}>
+      <span className="header__mark" onClick={onMarkReadClick}>
         Mark all as read
       </span>
     </header>
