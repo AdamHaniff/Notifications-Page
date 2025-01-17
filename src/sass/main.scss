@@ -8,6 +8,7 @@ $color-shuttle-grey: #5e6778;
 $color-alabaster: #f7fafd;
 $color-mercury: #dde7ee;
 $color-cadet-grey: #939cad;
+$color-ghost-white: #f9fafd;
 
 // ********** FONT-FAMILY **********
 $font-plus-jakarta-sans: "Plus Jakarta Sans", serif;
@@ -32,7 +33,6 @@ html {
 }
 
 body {
-  background: $color-white;
   font-family: $font-plus-jakarta-sans;
 }
 
@@ -41,16 +41,41 @@ body {
   height: 100%;
 }
 
-// ********** 375px LAYOUT **********
-body {
-  padding: 2.4rem 1.6rem;
+#root {
+  display: flex;
+  justify-content: center;
+  background: $color-ghost-white;
 }
+
+// *********** VARIABLES ***********
+$responsive-24px-33px: clamp(
+  2.4rem,
+  calc(2.4rem + (33 - 24) * ((100vw - 37.5rem) / (730 - 375))),
+  3.3rem
+);
+
+$responsive-16px-30px: clamp(
+  1.6rem,
+  calc(1.6rem + (30 - 16) * ((100vw - 37.5rem) / (730 - 375))),
+  3rem
+);
+
+$responsive-16px-17px: clamp(
+  1.6rem,
+  calc(1.6rem + (17 - 16) * ((100vw - 37.5rem) / (730 - 375))),
+  1.7rem
+);
+
+// ********** 375px LAYOUT **********
 
 // ************** APP *************
 .app {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  padding: $responsive-24px-33px $responsive-16px-30px $responsive-16px-17px;
+  max-width: 73rem;
+  background: $color-white;
 }
 
 // ************* HEADER *************
@@ -105,6 +130,7 @@ body {
   width: 100%;
   padding: 1.6rem;
   border-radius: 0.8rem;
+  transition: background 0.3s;
 
   &__avatar {
     display: block;
@@ -123,20 +149,20 @@ body {
     color: $color-dark;
     font-size: 1.4rem;
     font-weight: $fw-extra-bold;
+    margin-right: 0.6rem;
   }
 
   &__action {
     color: $color-shuttle-grey;
     font-size: 1.4rem;
     font-weight: $fw-medium-bold;
-    margin-left: 0.6rem;
+    margin-right: 0.6rem;
   }
 
   &__post {
     color: $color-shuttle-grey;
     font-size: 1.4rem;
     font-weight: $fw-bold;
-    margin-left: 0.6rem;
   }
 
   &__group {
@@ -144,7 +170,6 @@ body {
     color: $color-catalina-blue;
     font-size: 1.4rem;
     font-weight: $fw-bold;
-    margin-left: 0.6rem;
   }
 
   &__unread {
@@ -177,6 +202,7 @@ body {
     width: 3.9rem;
     height: 3.9rem;
     border-radius: 0.7rem;
+    margin-left: auto;
   }
 }
 

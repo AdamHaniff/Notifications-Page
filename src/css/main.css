@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  background: #fff;
   font-family: "Plus Jakarta Sans", serif;
 }
 
@@ -21,14 +20,19 @@ body {
   height: 100%;
 }
 
-body {
-  padding: 2.4rem 1.6rem;
+#root {
+  display: flex;
+  justify-content: center;
+  background: #f9fafd;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  padding: clamp(2.4rem, 2.4rem + 9 * (100vw - 37.5rem) / 355, 3.3rem) clamp(1.6rem, 1.6rem + 14 * (100vw - 37.5rem) / 355, 3rem) clamp(1.6rem, 1.6rem + 1 * (100vw - 37.5rem) / 355, 1.7rem);
+  max-width: 73rem;
+  background: #fff;
 }
 
 .header {
@@ -76,6 +80,7 @@ body {
   width: 100%;
   padding: 1.6rem;
   border-radius: 0.8rem;
+  transition: background 0.3s;
 }
 .notification__avatar {
   display: block;
@@ -92,25 +97,24 @@ body {
   color: #1c202b;
   font-size: 1.4rem;
   font-weight: 800;
+  margin-right: 0.6rem;
 }
 .notification__action {
   color: #5e6778;
   font-size: 1.4rem;
   font-weight: 500;
-  margin-left: 0.6rem;
+  margin-right: 0.6rem;
 }
 .notification__post {
   color: #5e6778;
   font-size: 1.4rem;
   font-weight: 700;
-  margin-left: 0.6rem;
 }
 .notification__group {
   display: inline-block;
   color: #0a327b;
   font-size: 1.4rem;
   font-weight: 700;
-  margin-left: 0.6rem;
 }
 .notification__unread {
   display: inline-block;
@@ -139,6 +143,7 @@ body {
   width: 3.9rem;
   height: 3.9rem;
   border-radius: 0.7rem;
+  margin-left: auto;
 }
 
 .bg-alabaster {
