@@ -48,16 +48,40 @@ body {
 }
 
 // *********** VARIABLES ***********
-$responsive-24px-33px: clamp(
-  2.4rem,
-  calc(2.4rem + (33 - 24) * ((100vw - 37.5rem) / (730 - 375))),
-  3.3rem
+$responsive-3px-4px: clamp(
+  0.3rem,
+  calc(0.3rem + (4 - 3) * ((100vw - 37.5rem) / (730 - 375))),
+  0.4rem
 );
 
-$responsive-16px-30px: clamp(
-  1.6rem,
-  calc(1.6rem + (30 - 16) * ((100vw - 37.5rem) / (730 - 375))),
-  3rem
+$responsive-9px-11px: clamp(
+  0.9rem,
+  calc(0.9rem + (11 - 9) * ((100vw - 37.5rem) / (730 - 375))),
+  1.1rem
+);
+
+$responsive-10px-8px: clamp(
+  0.8rem,
+  calc(1rem - (10 - 8) * ((100vw - 37.5rem) / (730 - 375))),
+  1rem
+);
+
+$responsive-12px-13px: clamp(
+  1.2rem,
+  calc(1.2rem + (13 - 12) * ((100vw - 37.5rem) / (730 - 375))),
+  1.3rem
+);
+
+$responsive-13px-19px: clamp(
+  1.3rem,
+  calc(1.3rem + (19 - 13) * ((100vw - 37.5rem) / (730 - 375))),
+  1.9rem
+);
+
+$responsive-14px-16px: clamp(
+  1.4rem,
+  calc(1.4rem + (16 - 14) * ((100vw - 37.5rem) / (730 - 375))),
+  1.6rem
 );
 
 $responsive-16px-17px: clamp(
@@ -66,13 +90,55 @@ $responsive-16px-17px: clamp(
   1.7rem
 );
 
+$responsive-16px-18px: clamp(
+  1.6rem,
+  calc(1.6rem + (18 - 16) * ((100vw - 37.5rem) / (730 - 375))),
+  1.8rem
+);
+
+$responsive-16px-20px: clamp(
+  1.6rem,
+  calc(1.6rem + (20 - 16) * ((100vw - 37.5rem) / (730 - 375))),
+  2rem
+);
+
+$responsive-16px-30px: clamp(
+  1.6rem,
+  calc(1.6rem + (30 - 16) * ((100vw - 37.5rem) / (730 - 375))),
+  3rem
+);
+
+$responsive-20px-24px: clamp(
+  2rem,
+  calc(2rem + (24 - 20) * ((100vw - 37.5rem) / (730 - 375))),
+  2.4rem
+);
+
+$responsive-24px-31px: clamp(
+  2.4rem,
+  calc(2.4rem + (31 - 24) * ((100vw - 37.5rem) / (730 - 375))),
+  3.1rem
+);
+
+$responsive-24px-33px: clamp(
+  2.4rem,
+  calc(2.4rem + (33 - 24) * ((100vw - 37.5rem) / (730 - 375))),
+  3.3rem
+);
+
+$responsive-39px-45px: clamp(
+  3.9rem,
+  calc(3.9rem + (45 - 39) * ((100vw - 37.5rem) / (730 - 375))),
+  4.5rem
+);
+
 // ********** 375px LAYOUT **********
 
 // ************** APP *************
 .app {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: $responsive-24px-31px;
   padding: $responsive-24px-33px $responsive-16px-30px $responsive-16px-17px;
   max-width: 73rem;
   background: $color-white;
@@ -86,13 +152,13 @@ $responsive-16px-17px: clamp(
 
   &__notifications-text-number {
     display: flex;
-    gap: 0.9rem;
+    gap: $responsive-9px-11px;
     align-items: center;
   }
 
   &__notifications-text {
     color: $color-dark;
-    font-size: 2rem;
+    font-size: $responsive-20px-24px;
     font-weight: $fw-extra-bold;
   }
 
@@ -111,7 +177,7 @@ $responsive-16px-17px: clamp(
 
   &__mark {
     color: $color-shuttle-grey;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
   }
 }
@@ -120,69 +186,70 @@ $responsive-16px-17px: clamp(
 .notifications {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: $responsive-10px-8px;
 }
 
 // ********** NOTIFICATION **********
 .notification {
   display: flex;
-  gap: 1.3rem;
+  gap: $responsive-13px-19px;
   width: 100%;
-  padding: 1.6rem;
+  padding: $responsive-16px-18px $responsive-16px-20px;
   border-radius: 0.8rem;
   transition: background 0.3s;
 
   &__avatar {
     display: block;
-    width: 3.9rem;
-    height: 3.9rem;
+    width: $responsive-39px-45px;
+    height: $responsive-39px-45px;
   }
 
   &__text-time {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: $responsive-3px-4px;
   }
 
   &__name {
     display: inline-block;
     color: $color-dark;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-extra-bold;
     margin-right: 0.6rem;
   }
 
   &__action {
     color: $color-shuttle-grey;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
     margin-right: 0.6rem;
   }
 
   &__post {
     color: $color-shuttle-grey;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-bold;
+    margin-right: 0.6rem;
   }
 
   &__group {
     display: inline-block;
     color: $color-catalina-blue;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-bold;
+    margin-right: 0.6rem;
   }
 
   &__unread {
     display: inline-block;
     width: 0.8rem;
     height: 0.81rem;
-    margin-left: 0.6rem;
     transform: translateY(-0.05rem);
   }
 
   &__time {
     color: $color-cadet-grey;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
   }
 
@@ -190,19 +257,30 @@ $responsive-16px-17px: clamp(
     border-radius: 0.5rem;
     border: 0.1rem solid $color-mercury;
     background: $color-white;
-    padding: 1.6rem;
-    margin-top: 1.2rem;
+    padding: $responsive-16px-17px $responsive-16px-20px $responsive-16px-20px;
+    margin-top: $responsive-12px-13px;
     color: $color-shuttle-grey;
-    font-size: 1.4rem;
+    font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
+    max-width: 56.6rem;
   }
 
   &__picture {
     display: block;
-    width: 3.9rem;
-    height: 3.9rem;
+    width: $responsive-39px-45px;
+    height: $responsive-39px-45px;
     border-radius: 0.7rem;
     margin-left: auto;
+  }
+}
+
+// ********** 730px LAYOUT **********
+@media only screen and (min-width: 45.625em) {
+  // ********* NOTIFICATION *********
+  .notification {
+    &__unread {
+      transform: translateY(-0.1rem);
+    }
   }
 }
 
