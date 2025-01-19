@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: center;
   background: $color-ghost-white;
+  height: 100%;
 }
 
 // *********** VARIABLES ***********
@@ -132,6 +133,14 @@ $responsive-39px-45px: clamp(
   4.5rem
 );
 
+// ************* MIXINS *************
+@mixin notification-text-styles($color, $font-weight) {
+  color: $color;
+  font-size: $responsive-14px-16px;
+  font-weight: $font-weight;
+  margin-right: 0.6rem;
+}
+
 // ********** 375px LAYOUT **********
 
 // ************** APP *************
@@ -141,6 +150,7 @@ $responsive-39px-45px: clamp(
   gap: $responsive-24px-31px;
   padding: $responsive-24px-33px $responsive-16px-30px $responsive-16px-17px;
   max-width: 73rem;
+  max-height: 83.9rem;
   background: $color-white;
 }
 
@@ -211,33 +221,19 @@ $responsive-39px-45px: clamp(
   }
 
   &__name {
-    display: inline-block;
-    color: $color-dark;
-    font-size: $responsive-14px-16px;
-    font-weight: $fw-extra-bold;
-    margin-right: 0.6rem;
+    @include notification-text-styles($color-dark, $fw-extra-bold);
   }
 
   &__action {
-    color: $color-shuttle-grey;
-    font-size: $responsive-14px-16px;
-    font-weight: $fw-medium-bold;
-    margin-right: 0.6rem;
+    @include notification-text-styles($color-shuttle-grey, $fw-medium-bold);
   }
 
   &__post {
-    color: $color-shuttle-grey;
-    font-size: $responsive-14px-16px;
-    font-weight: $fw-bold;
-    margin-right: 0.6rem;
+    @include notification-text-styles($color-shuttle-grey, $fw-bold);
   }
 
   &__group {
-    display: inline-block;
-    color: $color-catalina-blue;
-    font-size: $responsive-14px-16px;
-    font-weight: $fw-bold;
-    margin-right: 0.6rem;
+    @include notification-text-styles($color-catalina-blue, $fw-bold);
   }
 
   &__unread {
@@ -276,6 +272,17 @@ $responsive-39px-45px: clamp(
 
 // ********** 730px LAYOUT **********
 @media only screen and (min-width: 45.625em) {
+  // ************* ROOT *************
+  #root {
+    align-items: center;
+  }
+
+  // ************* APP *************
+  .app {
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 6rem 0 rgba(73, 97, 168, 0.05);
+  }
+
   // ********* NOTIFICATION *********
   .notification {
     &__unread {

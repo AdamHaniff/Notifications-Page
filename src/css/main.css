@@ -24,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   background: #f9fafd;
+  height: 100%;
 }
 
 .app {
@@ -32,6 +33,7 @@ body {
   gap: clamp(2.4rem, 2.4rem + 7 * (100vw - 37.5rem) / 355, 3.1rem);
   padding: clamp(2.4rem, 2.4rem + 9 * (100vw - 37.5rem) / 355, 3.3rem) clamp(1.6rem, 1.6rem + 14 * (100vw - 37.5rem) / 355, 3rem) clamp(1.6rem, 1.6rem + 1 * (100vw - 37.5rem) / 355, 1.7rem);
   max-width: 73rem;
+  max-height: 83.9rem;
   background: #fff;
 }
 
@@ -93,7 +95,6 @@ body {
   gap: clamp(0.3rem, 0.3rem + 1 * (100vw - 37.5rem) / 355, 0.4rem);
 }
 .notification__name {
-  display: inline-block;
   color: #1c202b;
   font-size: clamp(1.4rem, 1.4rem + 2 * (100vw - 37.5rem) / 355, 1.6rem);
   font-weight: 800;
@@ -112,7 +113,6 @@ body {
   margin-right: 0.6rem;
 }
 .notification__group {
-  display: inline-block;
   color: #0a327b;
   font-size: clamp(1.4rem, 1.4rem + 2 * (100vw - 37.5rem) / 355, 1.6rem);
   font-weight: 700;
@@ -149,6 +149,13 @@ body {
 }
 
 @media only screen and (min-width: 45.625em) {
+  #root {
+    align-items: center;
+  }
+  .app {
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 6rem 0 rgba(73, 97, 168, 0.05);
+  }
   .notification__unread {
     transform: translateY(-0.1rem);
   }
