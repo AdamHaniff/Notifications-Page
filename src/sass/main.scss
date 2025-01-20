@@ -37,7 +37,8 @@ body {
 }
 
 html,
-body {
+body,
+#root {
   height: 100%;
 }
 
@@ -45,7 +46,6 @@ body {
   display: flex;
   justify-content: center;
   background: $color-ghost-white;
-  height: 100%;
 }
 
 // *********** VARIABLES ***********
@@ -148,9 +148,9 @@ $responsive-39px-45px: clamp(
   display: flex;
   flex-direction: column;
   gap: $responsive-24px-31px;
-  padding: $responsive-24px-33px $responsive-16px-30px $responsive-16px-17px;
+  padding: $responsive-24px-33px $responsive-16px-30px 2.9rem;
   max-width: 73rem;
-  max-height: 83.9rem;
+  max-height: 90.1rem;
   background: $color-white;
 }
 
@@ -189,6 +189,7 @@ $responsive-39px-45px: clamp(
     color: $color-shuttle-grey;
     font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
+    cursor: pointer;
   }
 }
 
@@ -222,6 +223,7 @@ $responsive-39px-45px: clamp(
 
   &__name {
     @include notification-text-styles($color-dark, $fw-extra-bold);
+    cursor: pointer;
   }
 
   &__action {
@@ -230,10 +232,12 @@ $responsive-39px-45px: clamp(
 
   &__post {
     @include notification-text-styles($color-shuttle-grey, $fw-bold);
+    cursor: pointer;
   }
 
   &__group {
     @include notification-text-styles($color-catalina-blue, $fw-bold);
+    cursor: pointer;
   }
 
   &__unread {
@@ -272,11 +276,6 @@ $responsive-39px-45px: clamp(
 
 // ********** 730px LAYOUT **********
 @media only screen and (min-width: 45.625em) {
-  // ************* ROOT *************
-  #root {
-    align-items: center;
-  }
-
   // ************* APP *************
   .app {
     border-radius: 1.5rem;
