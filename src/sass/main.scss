@@ -37,15 +37,16 @@ body {
 }
 
 html,
-body,
-#root {
+body {
   height: 100%;
 }
 
 #root {
   display: flex;
   justify-content: center;
+  align-items: start;
   background: $color-ghost-white;
+  min-height: 100%;
 }
 
 // *********** VARIABLES ***********
@@ -127,6 +128,12 @@ $responsive-24px-33px: clamp(
   3.3rem
 );
 
+$responsive-29px-1px: clamp(
+  0.1rem,
+  calc(2.9rem - (29 - 1) * ((100vw - 37.5rem) / (730 - 375))),
+  2.9rem
+);
+
 $responsive-39px-45px: clamp(
   3.9rem,
   calc(3.9rem + (45 - 39) * ((100vw - 37.5rem) / (730 - 375))),
@@ -148,10 +155,10 @@ $responsive-39px-45px: clamp(
   display: flex;
   flex-direction: column;
   gap: $responsive-24px-31px;
-  padding: $responsive-24px-33px $responsive-16px-30px 2.9rem;
+  padding: $responsive-24px-33px $responsive-16px-30px $responsive-29px-1px;
   max-width: 73rem;
-  max-height: 90.1rem;
   background: $color-white;
+  margin: auto;
 }
 
 // ************* HEADER *************
@@ -263,6 +270,7 @@ $responsive-39px-45px: clamp(
     font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
     max-width: 56.6rem;
+    cursor: pointer;
   }
 
   &__picture {
@@ -271,6 +279,7 @@ $responsive-39px-45px: clamp(
     height: $responsive-39px-45px;
     border-radius: 0.7rem;
     margin-left: auto;
+    cursor: pointer;
   }
 }
 
