@@ -70,6 +70,7 @@ body {
   font-size: clamp(1.4rem, 1.4rem + 2 * (100vw - 37.5rem) / 355, 1.6rem);
   font-weight: 500;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .notifications {
@@ -102,6 +103,7 @@ body {
   font-weight: 800;
   margin-right: 0.6rem;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .notification__action {
   color: #5e6778;
@@ -115,6 +117,7 @@ body {
   font-weight: 700;
   margin-right: 0.6rem;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .notification__group {
   color: #0a327b;
@@ -125,7 +128,7 @@ body {
 }
 .notification__unread {
   display: inline-block;
-  width: 0.8rem;
+  width: 0.82rem;
   height: 0.81rem;
   transform: translateY(-0.05rem);
 }
@@ -145,6 +148,7 @@ body {
   font-weight: 500;
   max-width: 56.6rem;
   cursor: pointer;
+  transition: background 0.3s;
 }
 .notification__picture {
   display: block;
@@ -162,6 +166,20 @@ body {
   }
   .notification__unread {
     transform: translateY(-0.1rem);
+  }
+}
+@media only screen and (min-width: 62em) {
+  .header__mark:hover {
+    color: #0a327b;
+  }
+  .notification__name:hover {
+    color: #0a327b;
+  }
+  .notification__post:hover {
+    color: #0a327b;
+  }
+  .notification__message:hover {
+    background: #e5effa;
   }
 }
 .bg-alabaster {

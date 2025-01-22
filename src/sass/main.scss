@@ -9,6 +9,7 @@ $color-alabaster: #f7fafd;
 $color-mercury: #dde7ee;
 $color-cadet-grey: #939cad;
 $color-ghost-white: #f9fafd;
+$color-titan-white: #e5effa;
 
 // ********** FONT-FAMILY **********
 $font-plus-jakarta-sans: "Plus Jakarta Sans", serif;
@@ -197,6 +198,7 @@ $responsive-39px-45px: clamp(
     font-size: $responsive-14px-16px;
     font-weight: $fw-medium-bold;
     cursor: pointer;
+    transition: color 0.3s;
   }
 }
 
@@ -231,6 +233,7 @@ $responsive-39px-45px: clamp(
   &__name {
     @include notification-text-styles($color-dark, $fw-extra-bold);
     cursor: pointer;
+    transition: color 0.3s;
   }
 
   &__action {
@@ -240,6 +243,7 @@ $responsive-39px-45px: clamp(
   &__post {
     @include notification-text-styles($color-shuttle-grey, $fw-bold);
     cursor: pointer;
+    transition: color 0.3s;
   }
 
   &__group {
@@ -249,7 +253,7 @@ $responsive-39px-45px: clamp(
 
   &__unread {
     display: inline-block;
-    width: 0.8rem;
+    width: 0.82rem;
     height: 0.81rem;
     transform: translateY(-0.05rem);
   }
@@ -271,6 +275,7 @@ $responsive-39px-45px: clamp(
     font-weight: $fw-medium-bold;
     max-width: 56.6rem;
     cursor: pointer;
+    transition: background 0.3s;
   }
 
   &__picture {
@@ -295,6 +300,33 @@ $responsive-39px-45px: clamp(
   .notification {
     &__unread {
       transform: translateY(-0.1rem);
+    }
+  }
+}
+
+// ****** DESKTOP HOVER STATES ******
+
+// ********** 992px LAYOUT **********
+@media only screen and (min-width: 62em) {
+  // ************ HEADER ************
+  .header {
+    &__mark:hover {
+      color: $color-catalina-blue;
+    }
+  }
+
+  // ********* NOTIFICATION *********
+  .notification {
+    &__name:hover {
+      color: $color-catalina-blue;
+    }
+
+    &__post:hover {
+      color: $color-catalina-blue;
+    }
+
+    &__message:hover {
+      background: $color-titan-white;
     }
   }
 }
