@@ -1,0 +1,154 @@
+// ********** 375px LAYOUT **********
+
+// ************** APP *************
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: $responsive-24px-31px;
+  padding: $responsive-24px-33px $responsive-16px-30px $responsive-29px-1px;
+  max-width: 73rem;
+  background: $color-white;
+  margin: auto;
+}
+
+// ************* HEADER *************
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__notifications-text-number {
+    display: flex;
+    gap: $responsive-9px-11px;
+    align-items: center;
+  }
+
+  &__notifications-text {
+    color: $color-dark;
+    font-size: $responsive-20px-24px;
+    font-weight: $fw-extra-bold;
+  }
+
+  &__notifications-number {
+    width: 3.2rem;
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    background: $color-catalina-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: $fw-extra-bold;
+  }
+
+  &__mark {
+    color: $color-shuttle-grey;
+    font-size: $responsive-14px-16px;
+    font-weight: $fw-medium-bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+}
+
+// ********* NOTIFICATIONS *********
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: $responsive-10px-8px;
+}
+
+// ********** NOTIFICATION **********
+.notification {
+  display: flex;
+  gap: $responsive-13px-19px;
+  width: 100%;
+  padding: $responsive-16px-18px $responsive-16px-20px;
+  border-radius: 0.8rem;
+  transition: background 0.3s;
+
+  &__avatar {
+    display: block;
+    width: $responsive-39px-45px;
+    height: $responsive-39px-45px;
+  }
+
+  &__text-time {
+    display: flex;
+    flex-direction: column;
+    gap: $responsive-3px-4px;
+  }
+
+  &__name {
+    @include notification-text-styles($color-dark, $fw-extra-bold);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  &__action {
+    @include notification-text-styles($color-shuttle-grey, $fw-medium-bold);
+  }
+
+  &__post {
+    @include notification-text-styles($color-shuttle-grey, $fw-bold);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  &__group {
+    @include notification-text-styles($color-catalina-blue, $fw-bold);
+    cursor: pointer;
+  }
+
+  &__unread {
+    display: inline-block;
+    width: 0.82rem;
+    height: 0.81rem;
+    transform: translateY(-0.05rem);
+  }
+
+  &__time {
+    color: $color-cadet-grey;
+    font-size: $responsive-14px-16px;
+    font-weight: $fw-medium-bold;
+  }
+
+  &__message {
+    border-radius: 0.5rem;
+    border: 0.1rem solid $color-mercury;
+    background: $color-white;
+    padding: $responsive-16px-17px $responsive-16px-20px $responsive-16px-20px;
+    margin-top: $responsive-12px-13px;
+    color: $color-shuttle-grey;
+    font-size: $responsive-14px-16px;
+    font-weight: $fw-medium-bold;
+    max-width: 56.6rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  &__picture {
+    display: block;
+    width: $responsive-39px-45px;
+    height: $responsive-39px-45px;
+    border-radius: 0.7rem;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+// ********** 730px LAYOUT **********
+@media only screen and (min-width: 45.625em) {
+  // ************* APP *************
+  .app {
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 6rem 0 rgba(73, 97, 168, 0.05);
+  }
+
+  // ********* NOTIFICATION *********
+  .notification {
+    &__unread {
+      transform: translateY(-0.1rem);
+    }
+  }
+}

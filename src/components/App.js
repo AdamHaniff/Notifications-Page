@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./Header";
 import Notifications from "./Notifications";
-import data from "./data/data";
+import data from "../data/data";
 
 function App() {
   // STATE

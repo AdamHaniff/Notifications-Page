@@ -1,0 +1,7 @@
+// ************* MIXINS *************
+@mixin notification-text-styles($color, $font-weight) {
+  color: $color;
+  font-size: $responsive-14px-16px;
+  font-weight: $font-weight;
+  margin-right: 0.6rem;
+}

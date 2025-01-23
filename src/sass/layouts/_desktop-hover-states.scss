@@ -1,0 +1,26 @@
+// ****** DESKTOP HOVER STATES ******
+
+// ********** 992px LAYOUT **********
+@media only screen and (min-width: 62em) {
+  // ************ HEADER ************
+  .header {
+    &__mark:hover {
+      color: $color-catalina-blue;
+    }
+  }
+
+  // ********* NOTIFICATION *********
+  .notification {
+    &__name:hover {
+      color: $color-catalina-blue;
+    }
+
+    &__post:hover {
+      color: $color-catalina-blue;
+    }
+
+    &__message:hover {
+      background: $color-titan-white;
+    }
+  }
+}
